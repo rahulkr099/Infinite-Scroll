@@ -78,3 +78,12 @@ window.addEventListener('scroll', () => {
 
 // Initial call to getPhotos when the page loads.
 getPhotos();
+
+//Use this setAttributes function to follow DRY= Don't Repeat Yourself
+//This function is replacement of default setAttribute
+//This function allow us to set more than one attribute
+function setAttribute(element, attributes){
+    for(const key in attributes){
+    element.setAttribute(key, attributes[key]);
+    }
+}
